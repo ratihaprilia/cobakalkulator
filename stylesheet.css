@@ -31,7 +31,7 @@
   outline: none;
 }
 .all-clear, .zero-btn{
-  width: 50%
+  width: 50%;
  }
 .operator, .equal-sign{
   background-color: orange;
