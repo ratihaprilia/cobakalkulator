@@ -23,7 +23,7 @@
 }
 button{
   height: 80px;
-  background-color: gray;
+  background-color: grey;
   border: 1px solid black;
   font-size: 32px;
   color: #fff;
@@ -37,7 +37,7 @@ button{
   background-color: orange;
  }
 button:hover {
-  background-color: darkgray;
+  background-color: darkgrey;
  }
 .operator:hover, .equal-sign:hover {
   background-color: darkorange;
