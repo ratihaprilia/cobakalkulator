@@ -40,7 +40,9 @@ operators.forEach((operator) => {
 })
 
 const inputOperator = (operator) => {
-  prevNumber = currentNumber
+  if (calculationOperator === '') {
+   prevNumber = currentNumber
+  }
   calculationOperator = operator
   currentNumber = ''
 }
@@ -55,16 +57,16 @@ const calculate = () => {
    let result = ''
    switch(calculationOperator) {
      case '+':
-       result = parseInt(prevNumber) + parseInt(currentNumber) 
+       result = parseFloat(prevNumber) + parseFloat(currentNumber) 
        break
      case '-':
-       result = parseInt(prevNumber) - parseInt(currentNumber)
+       result = parseFloat(prevNumber) - parseFloat(currentNumber)
        break
      case '*':
-       result = parseInt(prevNumber) * parseInt(currentNumber)
+       result = parseFloat(prevNumber) * parseFloat(currentNumber)
        break
      case '/':
-       result = parseInt(prevNumber) / parseInt(currentNumber)
+       result = parseFloat(prevNumber) / parseFloat(currentNumber)
        break
      default:
        return
@@ -102,3 +104,18 @@ const decimal = document.querySelector('.decimal')
 decimal.addEventListener('click', (event) => {
    console.log(event.target.value)
 })
+
+inputDecimal = (dot) => {
+   if(currentNumber.includes('.')) {
+     return
+   }
+   currentNumber += dot
+}
+
+const decimal = document.querySelector('.decimal')
+
+decimal.addEventListener('click', (event) => {
+   inputDecimal(event.target.value)
+   updateScreen(currentNumber)
+})
+
