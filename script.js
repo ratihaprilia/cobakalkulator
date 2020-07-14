@@ -77,3 +77,28 @@ equalSign.addEventListener('click', () => {
     calculate() 
     updateScreen(currentNumber)
 })
+
+const clearBtn = document.querySelector('.all-clear')
+
+clearBtn.addEventListener('click', () => {
+   console.log('AC button is pressed')
+})
+
+const clearAll = () => {
+  prevNumber = ''
+  calculationOperator = ''
+  currentNumber = '0'
+}
+
+const clearBtn = document.querySelector('.all-clear')
+
+clearBtn.addEventListener('click', () => {
+   clearAll()
+   update Screen(currentNumber)
+})
+
+const decimal = document.querySelector('.decimal')
+
+decimal.addEventListener('click', (event) => {
+   console.log(event.target.value)
+})
