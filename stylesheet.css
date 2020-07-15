@@ -34,11 +34,11 @@ button{
   width: 50%;
  }
 .operator, .equal-sign{
-  background-color: blue;
+  background-color: green;
  }
 button:hover {
   background-color: darkgrey;
  }
 .operator:hover, .equal-sign:hover {
-  background-color: darkblue;
+  background-color: darkgreen;
  }
